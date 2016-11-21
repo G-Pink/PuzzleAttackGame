@@ -18,17 +18,26 @@ public class Tile extends GameActivity{
     int yellow = getResources().getIdentifier("yellow","drawable","com.app");*/
 
     ImageView tileimage;
+    int posx;
+    int row;
+    int posy;
+    int col;
     int position;
     int tileNum;
 
 
-    public Tile(int orientation) {
+    public Tile(int position) {
 
-        position = orientation;
+
+        this.position = position;
     }
 
     public void setTileimage(ImageView tileimage) {
         this.tileimage = tileimage;
+    }
+
+    public ImageView getTileimage() {
+        return tileimage;
     }
 
     public int getTileNum() {
@@ -39,9 +48,43 @@ public class Tile extends GameActivity{
         this.tileNum = tilenum;
     }
 
-    public ImageView getTileimage() {
-        return tileimage;
+    public int getPosx() {
+        return posx;
     }
 
+    public void setPosx(int posx) {
+        this.posx = posx;
+    }
 
+    public int getPosy() {
+        return posy;
+    }
+
+    public void setPosy(int posy) {
+        this.posy = posy;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    public void setCol(int col) {
+        this.col = col;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
 }
