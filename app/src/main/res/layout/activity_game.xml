@@ -10,7 +10,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.garrett.puzzleattackgame.GameActivity"
-    android:background="@drawable/gameback">
+    android:background="@drawable/gameback"
+    android:animateLayoutChanges="true">
 
 
     <TextView
@@ -63,7 +64,8 @@
         android:background="#999999BF"
         android:layout_below="@+id/score"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentEnd="true"
+        android:animateLayoutChanges="true">
 
     </RelativeLayout>
 
