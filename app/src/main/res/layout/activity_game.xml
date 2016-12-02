@@ -5,47 +5,11 @@
     android:id="@+id/activity_game"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context="com.example.garrett.puzzleattackgame.GameActivity"
     android:background="@drawable/gameback"
     android:animateLayoutChanges="true">
 
-
-    <TextView
-        android:text="0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:id="@+id/level" />
-
-    <TextView
-        android:text="0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/score"
-        android:inputType="number" />
-
-    <TextView
-        android:text="Score:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:id="@+id/textView2"
-        android:layout_marginRight="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/score"
-        android:layout_toStartOf="@+id/score" />
 
     <Chronometer
         android:layout_width="wrap_content"
@@ -55,19 +19,9 @@
         android:id="@+id/chronometer2"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3" />
-
-    <RelativeLayout
-        android:layout_width="286dp"
-        android:layout_height="500dp"
-        android:id="@+id/playGrid"
-        android:background="#999999BF"
-        android:layout_below="@+id/score"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:animateLayoutChanges="true">
-
-    </RelativeLayout>
+        android:paddingTop="5dp"
+        android:backgroundTint="#999999BF"
+        android:backgroundTintMode="multiply" />
 
     <TextView
         android:text="Time"
@@ -79,27 +33,67 @@
         android:layout_marginStart="13dp"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/level"
-        android:layout_toEndOf="@+id/level" />
+        android:layout_toEndOf="@+id/level"
+        android:backgroundTint="#999999BF" />
+
+    <Button
+        android:text="^"
+        android:id="@+id/rownew"
+        android:elevation="0dp"
+        android:layout_alignBottom="@+id/playGrid"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/playGrid"
+        android:layout_toRightOf="@+id/playGrid"
+        android:layout_height="50dp"
+        android:layout_width="30dp"
+        android:background="#a2a2cc" />
+
+    <RelativeLayout
+        android:layout_height="500dp"
+        android:id="@+id/playGrid"
+        android:background="#999999BF"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:animateLayoutChanges="false"
+        android:layout_width="286dp">
+
+        <TextView
+            android:text="_____________________________________________"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_marginTop="56dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
 
     <TextView
-        android:text="Level:"
+        android:text="Score:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:id="@+id/textView"
-        android:layout_alignTop="@+id/playGrid"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/playGrid"
+        android:layout_alignEnd="@+id/playGrid"
+        android:backgroundTint="#999999BF" />
 
-    <ImageView
+    <TextView
+        android:text="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/levelmeter"
-        android:id="@+id/imageView2"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
-        android:layout_marginRight="12dp"
-        android:layout_marginEnd="12dp" />
+        android:id="@+id/score"
+        android:inputType="number"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:paddingLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:paddingTop="5dp"
+        android:backgroundTint="#999999BF" />
 
 </RelativeLayout>

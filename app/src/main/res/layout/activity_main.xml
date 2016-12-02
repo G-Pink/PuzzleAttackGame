@@ -11,28 +11,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.garrett.puzzleattackgame.MainActivity"
     android:layout_centerHorizontal="true"
-    android:background="#f1f1f1">
+    android:background="@drawable/gameback">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="146dp"
+    <ImageButton
+        app:srcCompat="@drawable/play"
+        android:layout_marginBottom="37dp"
+        android:id="@+id/imageButton"
+        android:contentDescription="@string/play_button"
+        android:src="@drawable/play"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:layout_width="120dp"
+        android:layout_height="80dp" />
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/logo"
+        android:src="@drawable/logo"
+        android:id="@+id/imageView2"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_centerHorizontal="true" />
 
-        <ImageButton
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            app:srcCompat="@drawable/play"
-            android:id="@+id/imageButton"
-            android:scaleType="centerInside"
-            android:layout_alignTop="@+id/relativeLayout2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="45dp"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true" />
-
-    </RelativeLayout>
+    <TextView
+        android:text="Welcome to my game! Swap tiles left and right to make matches. A score of 10,000 wins the game!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView4" />
 
 </RelativeLayout>
