@@ -1,6 +1,6 @@
-package com.example.garrett.puzzleattackgame;
-
-
+package com.example.garrett.puzzleattackgame;//Original code utilized from Stack overflow user: Mirek Rusin
+//Edited to fit purpose of program
+//http://stackoverflow.com/questions/4139288/android-how-to-handle-right-to-left-swipe-gestures
 
 import android.content.Context;
 import android.view.GestureDetector;
@@ -33,13 +33,10 @@ public class OnSwipeTouchListener implements OnTouchListener {
         private static final int SWIPE_DISTANCE_THRESHOLD = 50;
         private static final int SWIPE_VELOCITY_THRESHOLD = 50;
 
-        @Override
-        public boolean onDown(MotionEvent e) {
-            return true;
-        }
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+
             float distanceX = e2.getX() - e1.getX();
             float distanceY = e2.getY() - e1.getY();
             if (Math.abs(distanceX) > Math.abs(distanceY) && Math.abs(distanceX) > SWIPE_DISTANCE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
